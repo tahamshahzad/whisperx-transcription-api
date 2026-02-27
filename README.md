@@ -49,7 +49,7 @@ modal run app.py
 ### Submit Transcription Job
 
 ```bash
-curl -X POST "https://tahamshahzad--tahamshahzad-transcription-api-web.modal.run/v1/transcribe" \
+curl -X POST "https://tahamshahzad--whisper-transcription-api-web-transcription-api-web.modal.run/v1/transcribe" \
   -H "Content-Type: application/json" \
   -d '{
     "audio_url": "https://example.com/audio.wav",
@@ -76,7 +76,7 @@ curl -X POST "https://tahamshahzad--tahamshahzad-transcription-api-web.modal.run
 {
   "job_id": "123e4567-e89b-12d3-a456-426614174000",
   "status": "completed",
-  "download_url": "https://tahamshahzad--tahamshahzad-transcription-api-web.modal.run/transcripts/123e4567-e89b-12d3-a456-426614174000",
+  "download_url": "https://tahamshahzad--whisper-transcription-api-web-transcription-api-web.modal.run/transcripts/123e4567-e89b-12d3-a456-426614174000",
   "completed_at": "2025-11-06T10:30:00Z"
 }
 ```
@@ -84,7 +84,7 @@ curl -X POST "https://tahamshahzad--tahamshahzad-transcription-api-web.modal.run
 ### Download Transcript
 
 ```bash
-curl "https://tahamshahzad--tahamshahzad-transcription-api-web.modal.run/transcripts/{job_id}"
+curl "https://tahamshahzad--whisper-transcription-api-web-transcription-api-web.modal.run/transcripts/{job_id}"
 ```
 
 ## API Endpoints

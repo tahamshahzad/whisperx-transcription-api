@@ -20,7 +20,7 @@ logging.basicConfig(level=logging.INFO)
 
 # ---------------- Modal app & image ----------------
 app = modal.App("whisper-transcription-api")
-workspace = 'qarib'
+workspace = 'tahamshahzad'
 app_name = 'whisper-transcription-api-web'
 
 # Persist model caches so cold starts are faster
