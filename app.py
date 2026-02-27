@@ -1,20 +1,17 @@
 # modal_whisperx_api.py
 import os
-import io
 import json
 import tempfile
 import uuid
-import asyncio
-import aiohttp
 import urllib.request
 import logging
-from typing import Optional, Dict, Any
+from typing import Optional
 from datetime import datetime
 import mimetypes
 
 import modal
-from fastapi import FastAPI, File, UploadFile, Form, HTTPException
-from fastapi.responses import JSONResponse, FileResponse
+from fastapi import FastAPI, HTTPException
+from fastapi.responses import FileResponse
 from pydantic import BaseModel
 
 # Setup logging
@@ -22,9 +19,9 @@ logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
 
 # ---------------- Modal app & image ----------------
-app = modal.App("qarib-transcription-api")
+app = modal.App("whisper-transcription-api")
 workspace = 'qarib'
-app_name = 'qarib-transcription-api-web'
+app_name = 'whisper-transcription-api-web'
 
 # Persist model caches so cold starts are faster
 CACHE_VOL = modal.Volume.from_name("whisperx-cache", create_if_missing=True)

@@ -49,13 +49,13 @@ modal run app.py
 ### Submit Transcription Job
 
 ```bash
-curl -X POST "https://qarib--qarib-transcription-api-web.modal.run/v1/transcribe" \
+curl -X POST "https://tahamshahzad--tahamshahzad-transcription-api-web.modal.run/v1/transcribe" \
   -H "Content-Type: application/json" \
   -d '{
     "audio_url": "https://example.com/audio.wav",
     "webhook_url": "https://your-server.com/webhook",
     "model_name": "large-v3",
-    "language": "ar",
+    "language": "en",
     "diarize": true,
     "align_words": true
   }'
@@ -76,7 +76,7 @@ curl -X POST "https://qarib--qarib-transcription-api-web.modal.run/v1/transcribe
 {
   "job_id": "123e4567-e89b-12d3-a456-426614174000",
   "status": "completed",
-  "download_url": "https://qarib--qarib-transcription-api-web.modal.run/transcripts/123e4567-e89b-12d3-a456-426614174000",
+  "download_url": "https://tahamshahzad--tahamshahzad-transcription-api-web.modal.run/transcripts/123e4567-e89b-12d3-a456-426614174000",
   "completed_at": "2025-11-06T10:30:00Z"
 }
 ```
@@ -84,7 +84,7 @@ curl -X POST "https://qarib--qarib-transcription-api-web.modal.run/v1/transcribe
 ### Download Transcript
 
 ```bash
-curl "https://qarib--qarib-transcription-api-web.modal.run/transcripts/{job_id}"
+curl "https://tahamshahzad--tahamshahzad-transcription-api-web.modal.run/transcripts/{job_id}"
 ```
 
 ## API Endpoints
